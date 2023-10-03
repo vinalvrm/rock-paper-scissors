@@ -1,8 +1,17 @@
 // Create a function getComputerChoice that randomly returns 'Rock', 'Paper', 'Scissors'
+function getComputerChoice() {
+    const rps = ['rock', 'paper', 'scissors']; // Array of choices 
+    let randomChoice = Math.floor(Math.random()*rps.length); // Choose random item from array
+    let choice = rps[randomChoice]; // Computer's choice
+    return choice
+};
+
 
 // Create a function playRound that plays a single round of Rock Paper Scissors. Function takes two parameters playerSelection, computerSelection.
 // returns a string that declares winner of round like so: "You Lose! Paper beats Rock"
 // Make playerSelection case-insensitive 
+
+
 
 // NOTE: return results, NOT console.log()
 
