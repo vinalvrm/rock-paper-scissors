@@ -32,8 +32,7 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
         return 'You Win! Scissors beats Paper'
     };
-}
-
+};
 
 // NOTE: return results, NOT console.log()
 
