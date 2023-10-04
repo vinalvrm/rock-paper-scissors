@@ -49,19 +49,31 @@ function game() {
         let compChoice = getComputerChoice()
         let result = playRound(playerChoice, compChoice)
         if (result.includes("You Win!") == true) {
+            console.log(result)
             playScore++
             console.log(`You: ${playScore} | Computer: ${compScore}`)
         }
         else if (result.includes("You Lose!") == true) {
+            console.log(result)
             compScore++
+            console.log(`You: ${playScore} | Computer: ${compScore}`)
+        }
+        else if (result.includes("Tie!") == true) {
+            console.log(result)
             console.log(`You: ${playScore} | Computer: ${compScore}`)
         }
         i++
         if (playScore == 3 && compScore < 3) {
-         console.log("Congratulations! You're the Winner!")   
+         console.log("Congratulations! You're the Winner!")  
         }
         else if (compScore == 3 && playScore < 3) {
             console.log("Better luck next time!")
+        }
+        else if ((i == 5) && (compScore > playScore)) {
+            console.log("Better luck next time!")
+        }
+        else if ((i == 5) && (playScore > compScore)) {
+            console.log("Congratulations! You're the Winner!")
         }
     }
 }
